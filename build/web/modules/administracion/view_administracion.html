@@ -1,0 +1,52 @@
+<!-- Modulo Administracion -->
+<div class="container-fluid row d-flex justify-content-center">
+    <h2 class="text-center">Administración</h2>
+    <!--
+    <div class="card col-lg-5 m-2 p-3">
+        <h5 style="text-align: center">Usuario Actual</h5>
+        <label for="txtIDUser" class="mt-2">ID de Usuario:</label>
+        <input id="txtIDUser" type="text" class="mt-2" disabled>
+        <label for="txtNameUser" class="mt-2">Nombre de Usuario:</label>
+        <input id="txtNameUser" type="text" class="mt-2">
+        <label for="txtPassword" class="mt-2">Contraseña de Usuario:</label>
+        <input id="txtPassword" type="text" class="mt-2">
+        <label for="txtRol" class="mt-2">Rol de Usuario:</label>
+        <input id="txtRol" type="text" class="mt-2">
+    </div>
+    -->
+    
+    <div class="card col-lg-8 m-2 p-3">
+        <h5 style="text-align: center">Registrar Nuevo Usuario</h5>
+        <label for="txtNewID" class="mt-2">ID de Usuario:</label>
+        <input id="txtNewID" type="text" class="mt-2" placeholder="ID de usuario" disabled>
+        <label for="txtNewUser" class="mt-2">Nombre de Usuario:</label>
+        <input id="txtNewUser" type="text" class="mt-2" placeholder="Inserte el nombre de usuario">
+        <label for="txtNewPassword" class="mt-2">Contraseña de Usuario:</label>
+        <input id="txtNewPassword" type="text" class="mt-2" placeholder="Inserte la contraseña">
+        <label for="txtNewRol" class="mt-2">Rol de Usuario:</label>
+        <select id="txtNewRol">
+            <option value="enfermeria">Enfermería</option>
+            <option value="nutricion">Nutrición</option>
+        </select>
+        <br>
+        <div class="m-2 text-center">
+            <button class="btn btn-success text-white" onclick="moduloAdministracion.save();" id="btnAdd" style="margin-left: 40px;">Guardar</button>
+            <button class="btn btn-info text-white" onclick="moduloRegistro.clean();" id="btnClean" style="margin-left: 40px;">Limpiar</button>
+        </div>
+        <br>
+        <div class="m-2">
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Id</th>
+                        <th>Usuario</th>
+                        <th>Rol</th>
+                    </tr>
+                </thead>
+                <tbody id="tblUsuarios">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div> 

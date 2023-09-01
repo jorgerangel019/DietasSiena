@@ -1,0 +1,135 @@
+<!-- Modulo Dietas -->
+<div class="container-fluid row d-flex justify-content-center">
+    <h2 class="text-center">Registro Dietas</h2>
+
+    <div class="card col-lg-6 m-2 p-3">
+        <h5 style="text-align: center">Datos del Paciente</h5>
+        <div>
+            <label for="txtIDPaciente" class="mt-2">ID:</label>
+            <input id="txtIDPaciente" type="number" disabled class="mt-2" placeholder="ID del paciente" style="margin-left: 132px; width: 425px;">
+        </div>
+        <div>
+            <label for="txtHabitacion" class="mt-2">Habitación:</label>
+            <input id="txtHabitacion" type="text" class="mt-2" placeholder="Inserte el numero de habitación" style="margin-left: 72px; width: 425px;">
+        </div>
+        <div>
+            <label for="txtNombre" class="mt-2 ">Nombre del Paciente:</label>
+            <input id="txtNombre" type="text" class="mt-2" placeholder="Inserte el nombre" style="width: 425px;">
+        </div>
+        <div>
+            <label for="txtFechaNacimiento" class="mt-2">Fecha de Nacimiento:</label>
+            <input id="txtFechaNacimiento" type="text"  class="mt-2" placeholder="Inserte la fecha de nacimiento" style="width: 425px;">
+        </div>
+        <div>
+            <label for="txtEdad" class="mt-2">Edad:</label>
+            <input id="txtEdad" type="number" class="mt-2" placeholder="Inserte la edad" style="margin-left: 113px; width: 425px;">
+        </div>
+        <div>
+            <label for="txtMedico" class="mt-2">Médico/Tratante:</label>
+            <input id="txtMedico" type="text" class="mt-2" placeholder="Inserte el nombre del médico" style="margin-left: 32px; width: 425px;">
+        </div>
+        <div>
+            <label for="txtDiagnostico" class="mt-2">Diagnostico:</label>
+            <input id="txtDiagnostico" type="text"  class="mt-2" placeholder="Inserte el Diagnostico" style="margin-left: 64px; width: 425px;">
+        </div>
+        <div>
+            <label for="txtAlergias" class="mt-2">Alergias alimentarias:</label>
+            <input id="txtAlergias" type="text"  class="mt-2 " placeholder="Inserte alergias" style="margin-left: 2px; width: 425px;">
+        </div>
+    </div>
+    <div class="card col-lg-5 m-2 p-3">
+        <h5 style="text-align: center">Descripción de Dieta</h5>
+        <div>
+            <label for="txtDesayuno" class="mt-2">Desayuno:</label>
+            <select id="txtDesayuno">
+                <option value="Liquida">Líquida</option>
+                <option value="Blanda">Blanda</option>
+                <option value="Normal">Normal</option>
+                <option value="Ayuno">Ayuno</option>
+            </select>
+            <input id="txtDesayunoDescripcion" type="text"  class="mt-2 " placeholder="Descripciones">
+        </div>
+        <div>
+            <label for="txtComida"  class="mt-2">Comida:</label>
+            <select id="txtComida" style="margin-left: 14px;">
+                <option value="Liquida">Líquida</option>
+                <option value="Blanda">Blanda</option>
+                <option value="Normal">Normal</option>
+                <option value="Ayuno">Ayuno</option>
+            </select>
+            <input id="txtComidaDescripcion" type="text"  class="mt-2 " placeholder="Descripciones">
+        </div>
+        <div>
+            <label for="txtCena" class="mt-2">Cena:</label>
+            <select id="txtCena" style="margin-left: 33px;">
+                <option value="Liquida">Líquida</option>
+                <option value="Blanda">Blanda</option>
+                <option value="Normal">Normal</option>
+                <option value="Ayuno">Ayuno</option>
+            </select>
+            <input id="txtCenaDescripcion" type="text"  class="mt-2 " placeholder="Descripciones">
+        </div>
+        <div class="form-group">
+            <label for="txtIndicaciones">Comment:</label>
+            <textarea id="txtIndicaciones" class="form-control" rows="4"></textarea>
+        </div>
+        <div>
+            <label for="txtEstatusPaciente" class="mt-2">Estatus Paciente:</label>
+            <input type="radio" id="txtHospitalizado" name="lenguaje" value="Hospitalizado">
+            <label for="txtHospitalizado">Hospitalizado</label>
+
+            <input type="radio" id="txtOperacion" name="lenguaje" value="Operacion">
+            <label for="txtOperacion">Operación</label>
+
+            <input type="radio" id="txtAlta" name="lenguaje" value="Alta">
+            <label for="txtAlta">Alta</label>
+        </div>
+        <div>
+            <div>
+                <label for="txtEstatusDieta" class="mt-2">Estatus Dieta:</label>
+                <input type="radio" id="txtValidado" name="dieta" value="validado">
+                <label for="txtValidado">Validado</label>
+
+                <input type="radio" id="txtModificado" name="dieta" value="modificado">
+                <label for="txtModificado">Modificado</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-around mt-2">
+        <button class="btn btn-success text-white" onclick="moduloRegistro.save();"> Guardar </button>
+        <button class="btn btn-info text-white" onclick="moduloRegistro.clean();"> Limpiar </button>
+    </div>
+
+    <div class="card col-lg-11 p-4 m-4 ">
+        <div class="d-flex m-2">
+            <label for="txtBusqueda" class="form-label mx-3">Buscar Paciente: </label>
+            <input id="txtBusqueda" type= "text" required>
+            <button class="mt-2 mx-2 btn btn-outline-primary m-2" onclick="moduloRegistro.searchPaciente();">Buscar</button>
+            <!--
+            <select name="select" id="select" onclick="moduloRegistro.refrescarTabla();">
+                <option value="Hospitalizado">Hospitalizado</option>
+                <option value="Operacion">Inactivo</option>
+            </select>
+            -->
+        </div>
+        <div style="max-height: 300px; overflow: auto;">
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <tr>
+
+                        <th>Habitación</th>
+                        <th>Nombre</th>
+                        <th>Tratante</th>
+                        <th>Diagnóstico</th>
+                        <th>Indicaciones</th>
+                        <th>Estatus</th>
+                    </tr>
+                </thead>
+                <tbody id="tblPacientes">
+
+                </tbody>
+            </table>
+        </div>
+    </div> 
+</div>

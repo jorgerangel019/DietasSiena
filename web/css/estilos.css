@@ -1,0 +1,30 @@
+.cuerpo{
+    background-color: #173D8E;
+}
+
+.pie{
+    background-color: #C6800F;
+    font-family: Arial, sans-serif;
+}
+
+.slogan{
+    font-family: Arial, sans-serif;
+    color: #173D8E;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.cabecera{
+    background-color: #F4F6F6;
+}
+
+.fondito {
+    background-image: url('../resources/sienaPortada3.png');
+    background-size: cover;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4c9aff;
+    box-shadow: 0 0 0 2px rgba(76, 154, 255, 0.3);
+}
+

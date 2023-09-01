@@ -1,0 +1,84 @@
+<!-- Modulo Dietas -->
+<div class="container-fluid row d-flex justify-content-center">
+    <h2 class="text-center">Atención de Dietas</h2>
+    
+    <div class="card col-lg-12 p-4 m-4 ">
+        <div class="d-flex m-2">
+            <label for="txtBusqueda" class="form-label mx-3">Buscar Paciente: </label>
+            <input id="txtBusqueda" type= "text" required>
+            <button class="mt-2 mx-2 btn btn-outline-primary m-2" onclick="moduloAtencion.buscarPaciente();">Buscar</button>
+        </div>
+        <div style="max-height: 250px; overflow: auto;">
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Habitación</th>
+                        <th>Nombre</th>
+                        <th>Tratante</th>
+                        <th>Diagnóstico</th>
+                        <th>Indicaciones</th>
+                        <th>Estatus</th>
+                    </tr>
+                </thead>
+                <tbody id="tblPacientes">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <h5 style="text-align: center">Información del Paciente</h5>
+    
+    <div class="card col-lg-5 p-4 m-4 ">
+        <center>
+            <a>Datos del Paciente</a>
+        </center>
+        <br>
+        <label for="txtHabitacion" class="mt-2">Num de Habitación:</label>
+        <input id="txtHabitacion" disabled type="text" class="mt-2" placeholder="Aquí aparecerá el numero de habitación">
+        <label for="txtNombre" class="mt-2">Nombre del paciente:</label>
+        <input id="txtNombre" type="text" disabled class="mt-2" placeholder="Aquí aparecerá el nombre del paciente">
+        <label for="txtFechaNacimiento" class="mt-2">Fecha de nacimiento:</label>
+        <input id="txtFechaNacimiento" type="text" disabled class="mt-2" placeholder="Aquí aparecerá la fecha de nacimiento">
+        <label for="txtEdad" class="mt-2">Edad:</label>
+        <input id="txtEdad" type="text" disabled class="mt-2" placeholder="Aquí aparecerá la edad del paciente">
+        <label for="txtMedico" class="mt-2">Tratante:</label>
+        <input id="txtMedico" type="text" disabled class="mt-2" placeholder="Aquí aparecerá el tratante">
+        <label for="txtDiagnostico" class="mt-2">Diagnostico:</label>
+        <input id="txtDiagnostico" type="text" disabled class="mt-2" placeholder="Aquí aparecerá el diagnostico">
+        <label for="txtAlergias" class="mt-2">Alergias:</label>
+        <input id="txtAlergias" type="text" disabled class="mt-2" placeholder="Aquí aparecerán las alergias del paciente">
+        <label for="txtEstatusPaciente" class="mt-2">Estatus del paciente:</label>
+        <input id="txtEstatusPaciente" type="text" disabled class="mt-2" placeholder="Aquí aparecerá el estatus del paciente">
+    </div>
+    
+    <div class="card col-lg-6 p-4 m-4 ">
+        <center>
+            <a>Descripción de dieta</a>
+        </center>
+        <br>
+        <label for="txtIndicaciones" class="mt-2">Comentarios:</label>
+        <textarea id="txtIndicaciones" disabled class="form-control" rows="3"></textarea>
+        <label for="txtDesayuno" class="mt-2">Tipo dieta desayuno:</label>
+        <input id="txtDesayuno" type="text" disabled class="mt-2">
+        <label for="txtDesayunoDescripcion" class="mt-2">Descripcion:</label>
+        <input id="txtDesayunoDescripcion" type="text" disabled class="mt-2" >
+        <label for="txtComida" class="mt-2">Tipo dieta comida:</label>
+        <input id="txtComida" type="text" disabled class="mt-2">
+        <label for="txtComidaDescripcion" class="mt-2">Descripcion:</label>
+        <input id="txtComidaDescripcion" type="text" disabled class="mt-2">
+        <label for="txtCena" class="mt-2">Tipo dieta cena:</label>
+        <input id="txtCena" type="text" disabled class="mt-2">
+        <label for="txtCenaDescripcion" class="mt-2">Descripcion:</label>
+        <input id="txtCenaDescripcion" type="text" disabled class="mt-2">
+    </div>
+    
+    <div class="d-flex justify-content-around mt-2">
+        <!--  <button class="btn btn-success text-white"> Guardar </button>  -->
+        <!--<button class="btn btn-info text-white" onclick="moduloAtencion.clean();"> Limpiar </button>-->
+        <a class="mx-4" onclick="moduloAtencion.clean();">
+            <img src="resources/limpiar.png" style=" width: 50px; height: 50px;">
+        </a>
+    </div>
+    
+</div> 

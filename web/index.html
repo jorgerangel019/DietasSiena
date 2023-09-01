@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hospital | Hospital Siena del Moral</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    </head>
+    <body>
+        <header>
+            <div class="cabecera row">
+                <div class="col-md-4">
+                    <a href="index.html">
+                    <img src="resources/logo1.png" style=" width: 100px; height: 70px;">
+                    </a>
+                </div>
+                <div class="col-md-4 mt-3">
+                    <h4 class="slogan">!Porque amamos la vida¡</h4>
+                </div>
+                <div class="col-md-4 justify-content-center text-center mt-3">
+                    <!--<button class="btn btn-info text-white" onclick="cargarModuloRegistro();">Registro</button>-->
+                    <a onclick="cargarModuloRegistro();">
+                        <img src="resources/registro-en-linea.png" style=" width:50px; height: 50px;">
+                    </a>
+                    <!--<button class="btn btn-success text-white" onclick="cargarModuloAdministracion();">Administrador</button>-->
+                    <a class="mx-4" onclick="cargarModuloAdministracion();">
+                        <img src="resources/admin.png" style=" width: 50px; height: 50px;">
+                    </a>
+                    <!--<button class="btn btn-warning text-white" onclick="cerrarSesion()">Cerrar sesión</button>-->
+                    <a class="mx-4" onclick="cerrarSesion()">
+                        <img src="resources/cerrar-sesion.png" style=" width: 50px; height: 50px;">
+                    </a>
+                </div>
+            </div>
+        </header>
+        
+        <div class="container-fluid" id="contenedorPrincipal">
+            <!-- CONTENEDOR DE LOS MODULOS -->
+            <img src="resources/sienaPortada.jpg" style=" width: 1260px; height: 380px;"/>
+        </div>
+        
+        <footer class="pie mt-3 p-3 text-white text-center">
+            <div class="col-md-12 row">
+                <div class="col-md-4">
+                    <a>
+                        <img src="resources/logo1.png" style=" width: 130px; height: 90px;">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <p>HOSPITAL SIENA</p>
+                    <p>477 775 5000</p>
+                </div>
+                <div class="col-md-4">
+                    <p>Blvd. Campestre #304, Jardines del Moral, 37160 León, Gto.</p>
+                    <small>&copy; 2023 <b>HOSPITAL SIENA</b> - Todos los Derechos Reservados.</small>
+                </div>
+            </div>
+        </footer>
+        <script src="style/js/bootstrap.bundle.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/functionLogin.js"></script>
+    </body>
+</html>

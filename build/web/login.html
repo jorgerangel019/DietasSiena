@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LOGIN</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    </head>
+    <body>
+        <main>
+            <div class="fondito row">
+                <div class="col-md-6">
+                    <!-- 
+                    <center>
+                        <img src="resources/logo3.png" style=" width: 200px; height: 200px;">
+                    </center>
+                    -->
+                </div>
+                <div class="col-md-4 bg-white rounded-top mt-5 mb-5">
+                    <div class="mx-4">
+                        <br>
+                        <h3>Iniciar sesión</h3>
+                        <br>
+                        <label for="txtUser">Nombre de usuario</label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <img src="resources/usuario.png" style="width: 15px; height: 15px;" alt="Icono">
+                            </span>
+                            <input id="txtUser" type="text" class="form-control" placeholder="Ingresa usuario">
+                        </div>
+                        <br>
+                        <label for="txtPassword">Contraseña</label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <img src="resources/llave.png" style="width: 15px; height: 15px;" alt="Icono">
+                            </span>
+                            <input id="txtPassword" type="password" class="form-control" placeholder="Ingresa contraseña">
+                        </div>
+                        <br>
+                        <br>
+                        <center>
+                            <button onclick="accesar();" id="btnIngresar" class="btn btn-info">Iniciar sesión</button>
+                        </center>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="pie p-2 text-white text-center">
+            <div class="col-md-12 row">
+                <div class="col-md-4">
+                    <a>
+                        <img src="resources/logo1.png" style=" width: 90px; height: 70px;">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <p>HOSPITAL SIENA</p>
+                    <p>477 775 5000</p>
+                </div>
+                <div class="col-md-4">
+                    <p>Blvd. Campestre #304, Jardines del Moral, 37160 León, Gto.</p>
+                    <small>&copy; 2023 <b>HOSPITAL SIENA</b> - Todos los Derechos Reservados.</small>
+                </div>
+            </div>
+        </footer>
+        <script src="js/functionLogin.js"></script>
+        <script src="style/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
